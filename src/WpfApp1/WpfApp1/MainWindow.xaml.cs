@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using Microsoft.Win32;
+using System.Text;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,19 +18,46 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Backend backendState;
         public MainWindow()
         {
+            backendState = new Backend();
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void searchClick(object sender, RoutedEventArgs e)
         {
+            Button clicked = (Button)sender;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = "d:\\";
+            openFileDialog.Filter = "Bitmap files (*.bmp)|*.bmp|All files (*.*)|*.*";
+            openFileDialog.Title = "Choose file";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.RestoreDirectory = true;
+            if (openFileDialog.ShowDialog() == true)
+            {
+                backendState.setPic(openFileDialog.FileName);
+                MessageBox.Show($"Selected file: {System.IO.Path.GetFileName(backendState.getPic())}");
 
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(backendState.getPic(),UriKind.Absolute);
+                img.EndInit();
+                selectedImage.Source = img;
+            }
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void comboBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ComboBox comboBox = (ComboBox)sender;
+            ComboBoxItem selectedItem = (ComboBoxItem)comboBox.SelectedItem;
+            backendState.setAlgo(selectedItem.Content.ToString());
+            MessageBox.Show($"Selected algorithm: {backendState.getAlgo()}"); ;
+        }
 
+        private void searchGo(object sender, RoutedEventArgs e)
+        {
+            backendState.run();
         }
     }
 }
