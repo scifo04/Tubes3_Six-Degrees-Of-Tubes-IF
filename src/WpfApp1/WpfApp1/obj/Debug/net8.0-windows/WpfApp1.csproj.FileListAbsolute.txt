@@ -18,3 +18,10 @@ D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\refint
 D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.pdb
 D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\ref\WpfApp1.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\App.g.cs
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1_MarkupCompile.cache
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1_MarkupCompile.lref
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\refint\WpfApp1.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.pdb
