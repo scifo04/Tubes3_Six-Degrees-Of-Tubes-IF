@@ -1,0 +1,5 @@
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net7.0-windows7.0\MainWindow.g.cs
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net7.0-windows7.0\App.g.cs
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net7.0-windows7.0\GeneratedInternalTypeHelper.g.cs
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net7.0-windows7.0\WpfApp1_MarkupCompile.cache
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net7.0-windows7.0\WpfApp1_MarkupCompile.lref

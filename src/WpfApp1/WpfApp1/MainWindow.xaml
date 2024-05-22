@@ -9,63 +9,42 @@
         Background="Yellow">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/> <!-- Header -->
-            <RowDefinition Height="*"/>    <!-- Main Content -->
-            <RowDefinition Height="Auto"/> <!-- Footer -->
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="160*"/>
         </Grid.RowDefinitions>
-
-        <!-- Header -->
-        <Border Grid.Row="0" Background="Orange" BorderBrush="Orange" BorderThickness="1">
-            <Label Content="FINGERPRINT DETECTOR" 
-                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
-                   FontSize="40" FontFamily="Inter"
-                   Height="56" Width="780" Margin="10,6,10,10"
-                   Foreground="White"/>
-        </Border>
-
-        <!-- Main Content -->
-        <Grid Grid.Row="1" Margin="20">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-
-            <!-- Left Column -->
-            <Border Grid.Column="0" Background="DimGray" BorderBrush="Black" BorderThickness="1" CornerRadius="20" Margin="0,0,10,0">
-                <StackPanel Margin="10">
-                    <Label Content="Fingerprint" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20"/>
-                    <Label Content="Input" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20" Margin="0,10,0,0"/>
-                </StackPanel>
-            </Border>
-
-            <!-- Center Column -->
-            <Border Grid.Column="1" Background="DimGray" BorderBrush="Black" BorderThickness="1" CornerRadius="20" Margin="10,0">
-                <StackPanel Margin="10">
-                    <Label Content="Fingerprint" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20"/>
-                    <Label Content="Closest" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20" Margin="0,10,0,0"/>
-                </StackPanel>
-            </Border>
-
-            <!-- Right Column -->
-            <Border Grid.Column="2" Background="DimGray" BorderBrush="Black" BorderThickness="1" CornerRadius="20" Margin="10,0,0,0">
-                <StackPanel Margin="10">
-                    <Label Content="List" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20"/>
-                    <Label Content="Biodata" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="20" Margin="0,10,0,0"/>
-                </StackPanel>
-            </Border>
+        <Rectangle Fill="Orange"  HorizontalAlignment="Center" Height="68" Stroke="Orange" VerticalAlignment="Top" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type Grid}}}"/>
+        <Label Content="FINGERPRINT DETECTOR" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40px" HorizontalAlignment="Center" VerticalAlignment="Top" Height="56" Width="780" Margin="0,6,0,52" FontFamily="Inter"/>
+        <Button Name="btnSearch" Click="searchClick" Background="OrangeRed" Content="Select Image" HorizontalAlignment="Left" Margin="59,232,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="93"/>
+        <Button Background="OrangeRed" Name="btnGo" Click="searchGo" Content="Search" HorizontalAlignment="Center" Margin="0,232,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="92"/>
+        <ComboBox HorizontalAlignment="Left" Margin="170,236,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" SelectionChanged="comboBoxSelectionChanged">
+            <ComboBoxItem Content="Knuth-Morris-Pratt"/>
+            <ComboBoxItem Content="Boyer-Moore"/>
+        </ComboBox>
+        <Label Content="Execution Time :" HorizontalAlignment="Left" Margin="544,232,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Match Percentage : " HorizontalAlignment="Left" Margin="544,258,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Grid HorizontalAlignment="Left" Height="220" Margin="59,96,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
+            <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"></Rectangle>
+            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
+                Fingerprint
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,110,0,88">
+                Input
+            </TextBlock>
+            <Image Name="selectedImage"/>
         </Grid>
-
-        <!-- Footer -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
-            <Button Background="OrangeRed" Content="Select Image" Width="120" Click="Button_Click"/>
-            <Button Background="OrangeRed" Content="Search" Width="120" Margin="10,0,0,0"/>
-            <ComboBox Width="150" Margin="10,0,0,0" SelectionChanged="ComboBox_SelectionChanged">
-                <ComboBoxItem Content="Knuth-Morris-Pratt"/>
-                <ComboBoxItem Content="Boyer-Moore"/>
-            </ComboBox>
-            <Label Content="Execution Time :" Margin="10,0,0,0"/>
-            <Label Content="Match Percentage :" Margin="10,0,0,0"/>
-        </StackPanel>
+        <Grid HorizontalAlignment="Center" Height="220" Margin="0,96,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
+            <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"></Rectangle>
+            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
+                Closest
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,110,0,88">
+                Fingerprint
+            </TextBlock>
+        </Grid>
+        <Grid HorizontalAlignment="Right" Height="220" Margin="0,96,58,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
+            <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"/>
+            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110"><Run Text="Biodata"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,110,0,88"><Run Text="List"/></TextBlock>
+        </Grid>
     </Grid>
 </Window>

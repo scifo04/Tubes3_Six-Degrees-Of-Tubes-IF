@@ -18,6 +18,7 @@ D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\refint
 D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.pdb
 D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\ref\WpfApp1.dll
+<<<<<<< HEAD
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\WpfApp1.exe
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\WpfApp1.deps.json
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\WpfApp1.runtimeconfig.json
@@ -39,3 +40,6 @@ D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\o
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.pdb
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.genruntimeconfig.cache
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\ref\WpfApp1.dll
+=======
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+>>>>>>> a802bf414a3536b7f4e5c9f4652142ad6c430125

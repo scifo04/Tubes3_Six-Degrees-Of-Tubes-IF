@@ -1,0 +1,63 @@
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\MainWindow.g.cs
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\App.g.cs
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1_MarkupCompile.cache
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1_MarkupCompile.lref
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.exe
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.deps.json
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.runtimeconfig.json
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.dll
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.pdb
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\MainWindow.baml
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.g.resources
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.AssemblyInfoInputs.cache
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.AssemblyInfo.cs
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.CoreCompileInputs.cache
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.dll
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\refint\WpfApp1.dll
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.pdb
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.genruntimeconfig.cache
+D:\Semester4\IF2211_Stima\DotNet\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\ref\WpfApp1.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.exe
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.deps.json
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.runtimeconfig.json
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.pdb
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\MainWindow.g.cs
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\App.g.cs
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1_MarkupCompile.cache
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1_MarkupCompile.lref
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\MainWindow.baml
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.g.resources
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.AssemblyInfoInputs.cache
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.AssemblyInfo.cs
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.CoreCompileInputs.cache
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.sourcelink.json
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\refint\WpfApp1.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.pdb
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.genruntimeconfig.cache
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\ref\WpfApp1.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\MainWindow.g.cs
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\App.g.cs
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1_MarkupCompile.cache
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1_MarkupCompile.lref
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\refint\WpfApp1.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.pdb
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.exe
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.deps.json
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.runtimeconfig.json
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\WpfApp1.pdb
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\MainWindow.baml
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.g.resources
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.AssemblyInfoInputs.cache
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.AssemblyInfo.cs
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.CoreCompileInputs.cache
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.sourcelink.json
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.genruntimeconfig.cache
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\ref\WpfApp1.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.AssemblyReference.cache

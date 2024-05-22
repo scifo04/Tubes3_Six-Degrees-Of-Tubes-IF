@@ -1,34 +1,86 @@
-﻿using System.Text;
+﻿using Microsoft.Win32;
+using System;
+using System.Drawing;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace WpfApp1
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        private Backend backendState;
+
         public MainWindow()
         {
+            backendState = new Backend();
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void searchClick(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = "d:\\";
+            openFileDialog.Filter = "Bitmap files (*.bmp)|*.bmp|All files (*.*)|*.*";
+            openFileDialog.Title = "Choose file";
+            openFileDialog.FilterIndex = 1;
+            openFileDialog.RestoreDirectory = true;
+            if (openFileDialog.ShowDialog() == true)
+            {
+                backendState.setPic(openFileDialog.FileName);
+                MessageBox.Show($"Selected file: {System.IO.Path.GetFileName(backendState.getPic())}");
 
+                BitmapImage img = new BitmapImage();
+                img.BeginInit();
+                img.UriSource = new Uri(backendState.getPic(), UriKind.Absolute);
+                img.EndInit();
+                selectedImage.Source = img;
+            }
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void comboBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            ComboBox comboBox = (ComboBox)sender;
+            ComboBoxItem selectedItem = (ComboBoxItem)comboBox.SelectedItem;
+            backendState.setAlgo(selectedItem.Content.ToString());
+            MessageBox.Show($"Selected algorithm: {backendState.getAlgo()}");
         }
+
+        private void searchGo(object sender, RoutedEventArgs e)
+        {
+            if (backendState.getPic() != null)
+            {
+                string imagePath = backendState.getPic();
+
+                try
+                {
+                    // Process the image
+                    string binaryRepresentation = FingerPrintConverter.ProcessImage(imagePath);
+                    Console.WriteLine($"Binary representation: {binaryRepresentation}");
+
+                    string asciiRepresentation = FingerPrintConverter.BinaryToAscii(binaryRepresentation);
+                    Console.WriteLine($"ASCII representation: {asciiRepresentation}");
+
+                    if (!string.IsNullOrEmpty(asciiRepresentation))
+                    {
+                        MessageBox.Show($"ASCII representation:\n{asciiRepresentation}", "Converted to ASCII");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to convert to ASCII.", "Conversion Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error processing image: {ex.Message}", "Processing Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an image first.", "No Image Selected", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
     }
 }
