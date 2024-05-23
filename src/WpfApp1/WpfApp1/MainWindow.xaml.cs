@@ -57,41 +57,40 @@ namespace WpfApp1
             if (backendState.getPic() != null)
             {
                 string imagePath = backendState.getPic();
-
+        
                 try
                 {
                     // Process the image
                     string binaryRepresentation = FingerPrintConverter.ProcessImage(imagePath);
                     Console.WriteLine($"Binary representation: {binaryRepresentation}");
-
+        
                     string midDigs = FingerPrintConverter.GetMiddleDigits(binaryRepresentation, 128);
-
+        
                     string asciiRepresentation = FingerPrintConverter.BinaryToAscii(midDigs);
                     Console.WriteLine($"ASCII representation: {asciiRepresentation}");
-
+        
                     if (!string.IsNullOrEmpty(asciiRepresentation))
                     {
                         // Reset the dictionary before starting the search
                         bestMatchesDict.Clear();
-
+        
                         // Fetch database data
-                        List<string> databaseData = FetchDatabaseData();
-
+                        List<(int Id, string AsciiRepresentation)> databaseData = FetchDatabaseData();
+        
                         // Perform search for the current ASCII representation
                         BoyerMoore bm = new BoyerMoore();
-                        List<(int Position, int HammingDistance, double ClosenessPercentage)> bestMatches = new List<(int Position, int HammingDistance, double ClosenessPercentage)>();
-
+                        List<(int Id, int Position, int HammingDistance, double ClosenessPercentage)> bestMatches = new List<(int Id, int Position, int HammingDistance, double ClosenessPercentage)>();
+        
                         Stopwatch stopwatch = Stopwatch.StartNew();
-
-                        foreach (string data in databaseData)
+        
+                        foreach (var data in databaseData)
                         {
-                            var matches = bm.Search(data, asciiRepresentation).First();
-                            bestMatches.Add(matches);
+                            var matches = bm.Search(data.AsciiRepresentation, asciiRepresentation).First();
+                            bestMatches.Add((data.Id, matches.Position, matches.HammingDistance, matches.ClosenessPercentage));
                         }
-
+        
                         stopwatch.Stop();
-
-                        
+        
                         if (bestMatches.Count > 0)
                         {
                             int nnn = 0;
@@ -100,24 +99,15 @@ namespace WpfApp1
                                 nnn += 1;
                                 // MessageBox.Show($"Position: {match.Position}, Hamming Distance: {match.HammingDistance}, Closeness Percentage: {match.ClosenessPercentage}");
                             }
-
+        
                             MessageBox.Show($"{nnn}");
-
+        
                             // Get the best match for the current ASCII representation
                             var bestMatch = bestMatches.OrderBy(m => m.HammingDistance).First();
-
-                            // Store the best match in the dictionary with the ASCII representation as key
-                            // bestMatchesDict[asciiRepresentation] = bestMatch;
-
-                            // Display the best match found so far
-                            // MessageBox.Show($"Best match found at position {bestMatch.Position} with closeness {bestMatch.ClosenessPercentage}%", "Match Found");
-
-                            // Now, find the overall best match from the dictionary
-                            // var finalBestMatch = bestMatchesDict.OrderBy(kv => kv.Value.HammingDistance).FirstOrDefault().Value;
-
+        
                             // Display the final best match found
-                            MessageBox.Show($"Final best match found at position {bestMatch.Position} with closeness {bestMatch.ClosenessPercentage}%", "Final Best Match Found");
-
+                            MessageBox.Show($"Final best match found at position {bestMatch.Position} with closeness {bestMatch.ClosenessPercentage}% at id {bestMatch.Id}", "Final Best Match Found");
+        
                             MessageBox.Show($"Time taken: {stopwatch.ElapsedMilliseconds} milliseconds");
                         }
                         else
@@ -143,12 +133,12 @@ namespace WpfApp1
 
 
 
-        private List<string> FetchDatabaseData()
+
+        private List<(int Id, string AsciiRepresentation)> FetchDatabaseData()
         {
-            List<string> data = new List<string>();
-            // Replace with your MySQL connection string
+            List<(int Id, string AsciiRepresentation)> data = new List<(int Id, string AsciiRepresentation)>();
             string connectionString = "Server=localhost;port=1234;Database=trystima2;Uid=root;Pwd=Ma17urungh3bat;Max Pool Size=100;Connect Timeout=1000;";
-            string query = "SELECT berkas_citra FROM sidik_jari";
+            string query = "SELECT id, berkas_citra FROM sidik_jari";
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -161,11 +151,11 @@ namespace WpfApp1
                         {
                             while (reader.Read())
                             {
+                                int id = reader.GetInt32("id");
                                 string asciiRepresentation = reader["berkas_citra"].ToString();
-                                // string asciiRepresentation = ConvertFileToAscii(fileName);
                                 if (asciiRepresentation != null)
                                 {
-                                    data.Add(asciiRepresentation);
+                                    data.Add((id, asciiRepresentation));
                                 }
                             }
                         }
@@ -179,6 +169,7 @@ namespace WpfApp1
 
             return data;
         }
+
 
         private string ConvertFileToAscii(string fileName)
         {
