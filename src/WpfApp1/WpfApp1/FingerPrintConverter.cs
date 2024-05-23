@@ -77,9 +77,9 @@ namespace WpfApp1
         {
             if (string.IsNullOrEmpty(binaryString))
                 throw new ArgumentException("Binary string cannot be null or empty.");
-
+    
             StringBuilder textBuilder = new StringBuilder();
-
+    
             for (int i = 0; i < binaryString.Length; i += 8)
             {
                 // Ensure there are at least 8 bits remaining to convert
@@ -87,10 +87,16 @@ namespace WpfApp1
                 {
                     string binary = binaryString.Substring(i, 8);
                     int intValue = Convert.ToInt32(binary, 2);
-                    textBuilder.Append((char)intValue);
+                    char character = (char)intValue;
+    
+                    // Exclude backslash and double quote characters
+                    if (character != '\\' && character != '"' && character != ' ')
+                    {
+                        textBuilder.Append(character);
+                    }
                 }
             }
-
+    
             return textBuilder.ToString();
         }
     }
