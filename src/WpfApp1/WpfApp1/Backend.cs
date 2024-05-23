@@ -8,6 +8,7 @@ namespace WpfApp1
     {
         private string chosenPic;
         private string chosenAlgo;
+        private Results gottenResults;
 
         public Backend()
         {

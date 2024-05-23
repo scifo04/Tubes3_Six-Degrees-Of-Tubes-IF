@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "MUGNzRnmaaoOVzhDAH5ayP+aGGulrhdVLTeb/MMCjdr5frOCbqbcVzW7XjnPRZpU2TskOHVdc0losQ9E1wGUdg==",
+  "dgSpecHash": "pY5v1pdEoynnZgyHiPRenea9K5ifSXhvkd7uesILjswc3sbQHqN3INqEswnDQMDa8xyojRTng8qQHXdzRjVqWg==",
   "success": true,
-  "projectFilePath": "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+  "projectFilePath": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\danie\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
-    "C:\\Users\\danie\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+    "C:\\Users\\Marvin Scifo\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\Marvin Scifo\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

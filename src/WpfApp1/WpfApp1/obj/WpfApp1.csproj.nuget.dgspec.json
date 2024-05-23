@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {}
+    "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {}
   },
   "projects": {
-    "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {
+    "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+        "projectUniqueName": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
         "projectName": "WpfApp1",
-        "projectPath": "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
-        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\obj\\",
+        "projectPath": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+        "packagesPath": "C:\\Users\\Marvin Scifo\\.nuget\\packages\\",
+        "outputPath": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Marvin Scifo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

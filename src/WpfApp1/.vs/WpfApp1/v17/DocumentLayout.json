@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\backend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\backend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\fingerprintconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\fingerprintconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\wpfapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\wpfapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\wpfapp1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\wpfapp1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|d:\\semester4\\if2211_stima\\tubes3_six-degrees-of-tubes-if\\src\\wpfapp1\\wpfapp1\\wpfapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FD3C9E97-661B-427F-95B4-C445431CFF58}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\wpfapp1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +58,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "WpfApp1",
               "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
               "RelativeDocumentMoniker": "WpfApp1\\WpfApp1.csproj",
@@ -70,33 +78,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Results.cs",
+              "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\Results.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\Results.cs",
+              "ToolTip": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\Results.cs",
+              "RelativeToolTip": "WpfApp1\\Results.cs",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAAALIAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T14:41:56.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FingerPrintConverter.cs",
+              "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\FingerPrintConverter.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\FingerPrintConverter.cs",
+              "ToolTip": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\FingerPrintConverter.cs",
+              "RelativeToolTip": "WpfApp1\\FingerPrintConverter.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T11:37:00.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Backend.cs",
               "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\Backend.cs",
               "RelativeDocumentMoniker": "WpfApp1\\Backend.cs",
               "ToolTip": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\Backend.cs",
               "RelativeToolTip": "WpfApp1\\Backend.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBgAAAAJAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAgwAoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-21T05:28:49.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml.cs",
               "ToolTip": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
               "RelativeToolTip": "WpfApp1\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAswCcAAAA8AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-12T06:20:50.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml",
@@ -108,20 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "WpfApp1\\AssemblyInfo.cs",
-              "ToolTip": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\AssemblyInfo.cs",
-              "RelativeToolTip": "WpfApp1\\AssemblyInfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T08:04:07.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\App.xaml.cs",
               "RelativeDocumentMoniker": "WpfApp1\\App.xaml.cs",
@@ -129,12 +150,36 @@
               "RelativeToolTip": "WpfApp1\\App.xaml.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T08:04:02.476Z",
+              "WhenOpened": "2024-05-12T08:04:02.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WpfApp1.csproj",
+              "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+              "RelativeDocumentMoniker": "WpfApp1\\WpfApp1.csproj",
+              "ToolTip": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+              "RelativeToolTip": "WpfApp1\\WpfApp1.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-12T06:43:20.623Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\AssemblyInfo.cs",
+              "ToolTip": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\AssemblyInfo.cs",
+              "RelativeToolTip": "WpfApp1\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-12T08:04:07.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\App.xaml",
               "RelativeDocumentMoniker": "WpfApp1\\App.xaml",
@@ -147,18 +192,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "WpfApp1.csproj",
-              "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
-              "RelativeDocumentMoniker": "WpfApp1\\WpfApp1.csproj",
-              "ToolTip": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
-              "RelativeToolTip": "WpfApp1\\WpfApp1.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-12T06:43:20.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "MainWindow.g.cs",
               "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\obj\\Debug\\net8.0-windows7.0\\MainWindow.g.cs",
               "RelativeDocumentMoniker": "WpfApp1\\obj\\Debug\\net8.0-windows7.0\\MainWindow.g.cs",
@@ -170,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "MainWindow.g.cs",
               "DocumentMoniker": "D:\\Semester4\\IF2211_Stima\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs",
               "RelativeDocumentMoniker": "WpfApp1\\obj\\Debug\\net8.0-windows\\MainWindow.g.cs",

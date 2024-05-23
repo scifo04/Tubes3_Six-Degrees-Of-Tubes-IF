@@ -61,3 +61,4 @@ D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\o
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.genruntimeconfig.cache
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\ref\WpfApp1.dll
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.AssemblyReference.cache
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.AssemblyReference.cache

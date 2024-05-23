@@ -65,6 +65,13 @@ namespace WpfApp1
                     if (!string.IsNullOrEmpty(asciiRepresentation))
                     {
                         MessageBox.Show($"ASCII representation:\n{asciiRepresentation}", "Converted to ASCII");
+                        BitmapImage imgay = new BitmapImage();
+                        imgay.BeginInit();
+                        imgay.UriSource = new Uri(backendState.getPic(), UriKind.Absolute);
+                        imgay.EndInit();
+                        selectedImageGay.Source = imgay;
+                        TimeRun.Text = "40ms";
+                        Percentage.Text = "60%";
                     }
                     else
                     {
