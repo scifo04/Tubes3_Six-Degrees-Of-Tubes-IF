@@ -1,20 +1,19 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using System.Diagnostics;
-using MySql.Data.MySqlClient;
 
 namespace WpfApp1
 {
     public partial class MainWindow : Window
     {
         private Backend backendState;
-
         private Dictionary<string, (int Position, int HammingDistance, double ClosenessPercentage)> bestMatchesDict = new Dictionary<string, (int, int, double)>();
 
         public MainWindow()
@@ -76,6 +75,8 @@ namespace WpfApp1
         
                         // Fetch database data
                         List<(int Id, string AsciiRepresentation)> databaseData = FetchDatabaseData();
+
+                        MessageBox.Show("cock");
         
                         // Perform search for the current ASCII representation
                         BoyerMoore bm = new BoyerMoore();
@@ -131,28 +132,28 @@ namespace WpfApp1
             }
         }
 
-
-
-
         private List<(int Id, string AsciiRepresentation)> FetchDatabaseData()
         {
             List<(int Id, string AsciiRepresentation)> data = new List<(int Id, string AsciiRepresentation)>();
-            string connectionString = "Server=localhost;port=1234;Database=trystima2;Uid=root;Pwd=Ma17urungh3bat;Max Pool Size=100;Connect Timeout=1000;";
+            // string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.db");
+            string connectionString = $"Data Source=example.db;Version=3;";
             string query = "SELECT id, berkas_citra FROM sidik_jari";
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
-                        using (MySqlDataReader reader = command.ExecuteReader())
+                        using (SQLiteDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
                             {
-                                int id = reader.GetInt32("id");
-                                string asciiRepresentation = reader["berkas_citra"].ToString();
+                                // int id = reader.GetInt32("id");
+                                int id = Convert.ToInt32(reader["id"]);
+                                string tempBC = reader["berkas_citra"].ToString();
+                                string asciiRepresentation = ConvertFileToAscii(tempBC);
                                 if (asciiRepresentation != null)
                                 {
                                     data.Add((id, asciiRepresentation));
@@ -170,10 +171,10 @@ namespace WpfApp1
             return data;
         }
 
-
         private string ConvertFileToAscii(string fileName)
         {
-            string filePath = Path.Combine("../../../test/dataset", fileName);
+            // string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dataset", fileName);
+            string filePath = Path.Combine("../../../test/", fileName);
 
             try
             {
@@ -181,36 +182,8 @@ namespace WpfApp1
                 string binaryRepresentation = FingerPrintConverter.ProcessImage(filePath);
                 Console.WriteLine($"Binary representation: {binaryRepresentation}");
 
-                // MessageBox.Show($"{binaryRepresentation}");
-
                 string asciiRepresentation = FingerPrintConverter.BinaryToAscii(binaryRepresentation);
                 Console.WriteLine($"ASCII representation: {asciiRepresentation}");
-
-                // Fetch database data
-                // List<string> databaseData = FetchDatabaseData();
-
-                // // Perform search for the current ASCII representation
-                // BoyerMoore bm = new BoyerMoore();
-                // List<(int Position, int HammingDistance, double ClosenessPercentage)> bestMatches = new List<(int Position, int HammingDistance, double ClosenessPercentage)>();
-
-                // foreach (string data in databaseData)
-                // {
-                //     var matches = bm.Search(data, asciiRepresentation);
-                //     bestMatches.AddRange(matches);
-                // }
-
-                // if (bestMatches.Count > 0)
-                // {
-                //     // Get the best match for the current ASCII representation
-                //     var bestMatch = bestMatches.OrderBy(m => m.HammingDistance).First();
-
-                //     // Store the best match in the dictionary with the ASCII representation as key
-                //     bestMatchesDict[asciiRepresentation] = bestMatch;
-                // }
-                // else
-                // {
-                //     MessageBox.Show("No matches found for this file.", "No Match", MessageBoxButton.OK, MessageBoxImage.Information);
-                // }
 
                 return asciiRepresentation;
             }
@@ -220,6 +193,5 @@ namespace WpfApp1
                 return null;
             }
         }
-
     }
 }

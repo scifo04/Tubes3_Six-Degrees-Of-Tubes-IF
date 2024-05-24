@@ -76,3 +76,17 @@ D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\b
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\krb5_64.dll
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\krbcc64.dll
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.Up2Date
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\EntityFramework.SqlServer.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\EntityFramework.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\System.Data.SQLite.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\System.Data.SqlClient.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\System.Data.SQLite.EF6.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-arm64\native\sni.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\sni.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x86\native\sni.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\SQLite.Interop.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x86\native\SQLite.Interop.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
