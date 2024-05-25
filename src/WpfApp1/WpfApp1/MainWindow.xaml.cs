@@ -56,64 +56,63 @@ namespace WpfApp1
             if (backendState.getPic() != null)
             {
                 string imagePath = backendState.getPic();
-        
+
                 try
                 {
                     // Process the image
                     string binaryRepresentation = FingerPrintConverter.ProcessImage(imagePath);
                     Console.WriteLine($"Binary representation: {binaryRepresentation}");
-        
+
                     string midDigs = FingerPrintConverter.GetMiddleDigits(binaryRepresentation, 128);
-        
+
                     string asciiRepresentation = FingerPrintConverter.BinaryToAscii(midDigs);
                     Console.WriteLine($"ASCII representation: {asciiRepresentation}");
-        
+
                     if (!string.IsNullOrEmpty(asciiRepresentation))
                     {
                         // Reset the dictionary before starting the search
                         bestMatchesDict.Clear();
-        
-                        // Fetch database data
-                        List<(int Id, string AsciiRepresentation)> databaseData = FetchDatabaseData();
 
-                        MessageBox.Show("cock");
-        
+                        // Fetch database data
+                        List<(int Id, string AsciiRepresentation, string Nama)> databaseData = FetchDatabaseData();
+
                         // Perform search for the current ASCII representation
-                        BoyerMoore bm = new BoyerMoore();
-                        List<(int Id, int Position, int HammingDistance, double ClosenessPercentage)> bestMatches = new List<(int Id, int Position, int HammingDistance, double ClosenessPercentage)>();
-        
-                        Stopwatch stopwatch = Stopwatch.StartNew();
-        
-                        foreach (var data in databaseData)
+                        IStringSearchAlgorithm algorithm = GetSearchAlgorithm(backendState.getAlgo());
+                        if (algorithm != null)
                         {
-                            var matches = bm.Search(data.AsciiRepresentation, asciiRepresentation).First();
-                            bestMatches.Add((data.Id, matches.Position, matches.HammingDistance, matches.ClosenessPercentage));
-                        }
-        
-                        stopwatch.Stop();
-        
-                        if (bestMatches.Count > 0)
-                        {
-                            int nnn = 0;
-                            foreach (var match in bestMatches)
+                            List<(int Id, int Position, int HammingDistance, double ClosenessPercentage, string Nama)> bestMatches = new List<(int, int, int, double, string)>();
+
+                            Stopwatch stopwatch = Stopwatch.StartNew();
+
+                            foreach (var data in databaseData)
                             {
-                                nnn += 1;
-                                // MessageBox.Show($"Position: {match.Position}, Hamming Distance: {match.HammingDistance}, Closeness Percentage: {match.ClosenessPercentage}");
+                                var matches = algorithm.Search(data.AsciiRepresentation, asciiRepresentation).First();
+                                bestMatches.Add((data.Id, matches.Position, matches.HammingDistance, matches.ClosenessPercentage, data.Nama));
                             }
-        
-                            MessageBox.Show($"{nnn}");
-        
-                            // Get the best match for the current ASCII representation
-                            var bestMatch = bestMatches.OrderBy(m => m.HammingDistance).First();
-        
-                            // Display the final best match found
-                            MessageBox.Show($"Final best match found at position {bestMatch.Position} with closeness {bestMatch.ClosenessPercentage}% at id {bestMatch.Id}", "Final Best Match Found");
-        
-                            MessageBox.Show($"Time taken: {stopwatch.ElapsedMilliseconds} milliseconds");
+
+                            stopwatch.Stop();
+
+                            if (bestMatches.Count > 0)
+                            {
+                                int nnn = bestMatches.Count;
+                                MessageBox.Show($"{nnn}");
+
+                                // Get the best match for the current ASCII representation
+                                var bestMatch = bestMatches.OrderBy(m => m.HammingDistance).First();
+
+                                // Display the final best match found
+                                MessageBox.Show($"Final best match found at position {bestMatch.Position} with closeness {bestMatch.ClosenessPercentage}% at id {bestMatch.Id} with nama {bestMatch.Nama}", "Final Best Match Found");
+
+                                MessageBox.Show($"Time taken: {stopwatch.ElapsedMilliseconds} milliseconds");
+                            }
+                            else
+                            {
+                                MessageBox.Show("No matches found for this image.", "No Match", MessageBoxButton.OK, MessageBoxImage.Information);
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("No matches found for this image.", "No Match", MessageBoxButton.OK, MessageBoxImage.Information);
+                            MessageBox.Show("Please select an algorithm.", "Algorithm Error", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
                     }
                     else
@@ -132,12 +131,14 @@ namespace WpfApp1
             }
         }
 
-        private List<(int Id, string AsciiRepresentation)> FetchDatabaseData()
+
+        private List<(int Id, string AsciiRepresentation, string Nama)> FetchDatabaseData()
         {
-            List<(int Id, string AsciiRepresentation)> data = new List<(int Id, string AsciiRepresentation)>();
+            List<(int Id, string AsciiRepresentation, string Nama)> data = new List<(int Id, string AsciiRepresentation, string Nama)>();
+            // Assuming your database file is "example.db" in the current directory
             // string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.db");
             string connectionString = $"Data Source=example.db;Version=3;";
-            string query = "SELECT id, berkas_citra FROM sidik_jari";
+            string query = "SELECT id, berkas_citra, nama FROM sidik_jari";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -150,13 +151,13 @@ namespace WpfApp1
                         {
                             while (reader.Read())
                             {
-                                // int id = reader.GetInt32("id");
                                 int id = Convert.ToInt32(reader["id"]);
                                 string tempBC = reader["berkas_citra"].ToString();
                                 string asciiRepresentation = ConvertFileToAscii(tempBC);
                                 if (asciiRepresentation != null)
                                 {
-                                    data.Add((id, asciiRepresentation));
+                                    string nama = reader["nama"].ToString();
+                                    data.Add((id, asciiRepresentation, nama));
                                 }
                             }
                         }
@@ -173,7 +174,8 @@ namespace WpfApp1
 
         private string ConvertFileToAscii(string fileName)
         {
-            // string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "dataset", fileName);
+            // Assuming your files are in a "test" folder in the current directory
+            // string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "test", fileName);
             string filePath = Path.Combine("../../../test/", fileName);
 
             try
@@ -191,6 +193,19 @@ namespace WpfApp1
             {
                 MessageBox.Show($"Error converting file to ASCII: {ex.Message}", "Conversion Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return null;
+            }
+        }
+
+        private IStringSearchAlgorithm GetSearchAlgorithm(string algorithm)
+        {
+            switch (algorithm)
+            {
+                case "Knuth-Morris-Pratt":
+                    return new KMP();
+                case "Boyer-Moore":
+                    return new BoyerMoore();
+                default:
+                    throw new ArgumentException($"Unsupported algorithm: {algorithm}");
             }
         }
     }

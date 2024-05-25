@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-class BoyerMoore
+public class BoyerMoore : IStringSearchAlgorithm
 {
     private readonly Dictionary<char, int> _badCharacterShift;
     private int[] _goodSuffixShift;
@@ -58,7 +58,7 @@ class BoyerMoore
         }
     }
 
-    public List<(int Position, int HammingDistance, double ClosenessPercentage)> Search(string text, string pattern)
+    public IEnumerable<(int Position, int HammingDistance, double ClosenessPercentage)> Search(string text, string pattern)
     {
         if (string.IsNullOrEmpty(text))
             throw new ArgumentException("Text cannot be null or empty.");
