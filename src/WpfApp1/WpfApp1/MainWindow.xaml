@@ -7,20 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="850"
         Background="Yellow">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="57*"/>
             <RowDefinition Height="160*"/>
         </Grid.RowDefinitions>
-        <Rectangle Fill="Orange"  HorizontalAlignment="Center" Height="68" Stroke="Orange" VerticalAlignment="Top" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type Grid}}}"/>
+        
+        <!-- Top Header -->
+        <Rectangle Fill="Orange" HorizontalAlignment="Center" Height="68" Stroke="Orange" VerticalAlignment="Top" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type Grid}}}"/>
         <Label Content="FINGERPRINT DETECTOR" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40px" HorizontalAlignment="Center" VerticalAlignment="Top" Height="56" Width="780" Margin="0,6,0,52" FontFamily="Inter"/>
+        
+        <!-- Select Image Button -->
         <Button Name="btnSearch" Click="searchClick" Background="OrangeRed" Content="Select Image" HorizontalAlignment="Left" Margin="59,232,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="93"/>
+        
+        <!-- Search Button -->
         <Button Background="OrangeRed" Name="btnGo" Click="searchGo" Content="Search" HorizontalAlignment="Center" Margin="0,232,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="92"/>
-        <ComboBox HorizontalAlignment="Left" Margin="170,236,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" SelectionChanged="comboBoxSelectionChanged">
+        
+        <!-- Algorithm Selection ComboBox -->
+        <ComboBox x:Name="algoSelection" HorizontalAlignment="Left" Margin="170,236,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" SelectionChanged="comboBoxSelectionChanged">
             <ComboBoxItem Content="Knuth-Morris-Pratt"/>
             <ComboBoxItem Content="Boyer-Moore"/>
         </ComboBox>
-        <Label Margin="10,10,0,0" Name="ShownTime"/>
+        
+        <!-- Left Grid for Selected Image -->
         <Grid HorizontalAlignment="Left" Height="220" Margin="59,96,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
             <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"></Rectangle>
             <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
@@ -31,6 +41,8 @@
             </TextBlock>
             <Image Name="selectedImage"/>
         </Grid>
+        
+        <!-- Center Grid for Closest Fingerprint -->
         <Grid HorizontalAlignment="Center" Height="220" Margin="0,96,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
             <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"></Rectangle>
             <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
@@ -41,16 +53,22 @@
             </TextBlock>
             <Image Name="selectedImageGay"/>
         </Grid>
+        
+        <!-- Right Grid for Biodata List -->
         <Grid HorizontalAlignment="Right" Height="220" Margin="0,96,58,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
             <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"/>
-            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110"><Run Text="Biodata"/></TextBlock>
-            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,110,0,88"><Run Text="List"/></TextBlock>
+            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
+                Biodata
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,110,0,88">
+                List
+            </TextBlock>
         </Grid>
         <TextBlock Margin="550,228,106,76" Grid.Row="1">
             <Run Text="Execution Time: "/>
             <Run Name="TimeRun" Text=""/>
         </TextBlock>
-        <TextBlock Margin="550,247,106,58" Grid.Row="1">
+        <TextBlock Margin="550,263,106,41" Grid.Row="1">
             <Run Text="Match Percentage: "/>
             <Run Name="Percentage" Text=""/>
         </TextBlock>
