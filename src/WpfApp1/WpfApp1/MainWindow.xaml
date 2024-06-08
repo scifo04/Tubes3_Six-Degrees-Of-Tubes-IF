@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="850"
-        Background="Yellow">
+        Title="Fingerprint Detector" Height="500" Width="850"
+        Background="#2C2C2C">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -15,14 +15,14 @@
         </Grid.RowDefinitions>
         
         <!-- Top Header -->
-        <Rectangle Fill="Orange" HorizontalAlignment="Center" Height="68" Stroke="Orange" VerticalAlignment="Top" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type Grid}}}"/>
+        <Rectangle Fill="#FF6600" HorizontalAlignment="Center" Height="68" Stroke="#FF6600" VerticalAlignment="Top" Width="{Binding ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type Grid}}}"/>
         <Label Content="FINGERPRINT DETECTOR" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="40px" HorizontalAlignment="Center" VerticalAlignment="Top" Height="56" Width="780" Margin="0,6,0,52" FontFamily="Inter"/>
         
         <!-- Select Image Button -->
-        <Button Name="btnSearch" Click="searchClick" Background="OrangeRed" Content="Select Image" HorizontalAlignment="Left" Margin="59,232,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="93"/>
+        <Button Name="btnSearch" Click="searchClick" Background="#FF3333" Content="Select Image" HorizontalAlignment="Left" Margin="59,232,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="93"/>
         
         <!-- Search Button -->
-        <Button Background="OrangeRed" Name="btnGo" Click="searchGo" Content="Search" HorizontalAlignment="Center" Margin="0,232,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="92"/>
+        <Button Background="#FF3333" Name="btnGo" Click="searchGo" Content="Search" HorizontalAlignment="Center" Margin="0,232,0,0" Grid.Row="1" VerticalAlignment="Top" Height="29" Width="92"/>
         
         <!-- Algorithm Selection ComboBox -->
         <ComboBox x:Name="algoSelection" HorizontalAlignment="Left" Margin="170,236,0,0" Grid.Row="1" VerticalAlignment="Top" Width="168" SelectionChanged="comboBoxSelectionChanged">
@@ -32,7 +32,7 @@
         
         <!-- Left Grid for Selected Image -->
         <Grid HorizontalAlignment="Left" Height="220" Margin="59,96,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
-            <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"></Rectangle>
+            <Rectangle Fill="#404040" RadiusX="20px" RadiusY="20px" Stroke="Black"></Rectangle>
             <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
                 Fingerprint
             </TextBlock>
@@ -44,7 +44,7 @@
         
         <!-- Center Grid for Closest Fingerprint -->
         <Grid HorizontalAlignment="Center" Height="220" Margin="0,96,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
-            <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"></Rectangle>
+            <Rectangle Fill="#404040" RadiusX="20px" RadiusY="20px" Stroke="Black"></Rectangle>
             <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
                 Closest
             </TextBlock>
@@ -56,7 +56,7 @@
         
         <!-- Right Grid for Biodata List -->
         <Grid HorizontalAlignment="Right" Height="220" Margin="0,96,58,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
-            <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black" MouseLeftButtonDown="GoToInfo"/>
+            <Rectangle Fill="#404040" RadiusX="20px" RadiusY="20px" Stroke="Black" MouseLeftButtonDown="GoToInfo"/>
             <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
                 Biodata
             </TextBlock>
@@ -66,15 +66,28 @@
         </Grid>
         
         <!-- Execution Time TextBlock -->
-        <TextBlock Margin="550,242,106,62" Grid.Row="1">
+        <TextBlock Margin="550,242,106,62" Grid.Row="1" Foreground="White">
             <Run Text="Execution Time: "/>
             <Run Name="TimeRun" Text=""/>
         </TextBlock>
         
         <!-- Match Percentage TextBlock -->
-        <TextBlock Margin="550,263,106,41" Grid.Row="1">
+        <TextBlock Margin="550,263,106,41" Grid.Row="1" Foreground="White">
             <Run Text="Match Percentage: "/>
             <Run Name="Percentage" Text=""/>
         </TextBlock>
+
+        <!-- Loading Overlay -->
+        <Grid x:Name="loadingOverlay" Visibility="Collapsed">
+            <Rectangle Fill="#80000000" />
+            <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border Background="#252525" CornerRadius="10" Width="200" Height="100">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock Text="Loading..." Foreground="White" FontSize="18" Margin="0 0 0 10"/>
+                        <ProgressBar Width="150" Height="10" IsIndeterminate="True"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

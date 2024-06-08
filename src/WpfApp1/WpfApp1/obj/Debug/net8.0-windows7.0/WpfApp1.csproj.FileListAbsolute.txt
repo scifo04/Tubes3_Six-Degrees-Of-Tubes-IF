@@ -120,3 +120,5 @@ D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin
 D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.Up2Date
 D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\InfoWindow.g.cs
 D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\InfoWindow.baml
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\InfoWindow.g.cs
+D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\InfoWindow.baml
