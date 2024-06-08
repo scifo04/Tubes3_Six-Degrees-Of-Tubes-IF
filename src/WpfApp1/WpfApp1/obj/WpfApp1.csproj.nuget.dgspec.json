@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {}
+    "E:\\Semester 4\\Strategi Algoritma\\Tubes 3\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {}
   },
   "projects": {
-    "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {
+    "E:\\Semester 4\\Strategi Algoritma\\Tubes 3\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+        "projectUniqueName": "E:\\Semester 4\\Strategi Algoritma\\Tubes 3\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
         "projectName": "WpfApp1",
-        "projectPath": "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
-        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal Doc\\Projects\\C#\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\obj\\",
+        "projectPath": "E:\\Semester 4\\Strategi Algoritma\\Tubes 3\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\WpfApp1.csproj",
+        "packagesPath": "C:\\Users\\acer3\\.nuget\\packages\\",
+        "outputPath": "E:\\Semester 4\\Strategi Algoritma\\Tubes 3\\Tubes3_Six-Degrees-Of-Tubes-IF\\src\\WpfApp1\\WpfApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\acer3\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,6 +48,10 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.4.0, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.118, )"
             },
             "System.Drawing.Common": {
               "target": "Package",

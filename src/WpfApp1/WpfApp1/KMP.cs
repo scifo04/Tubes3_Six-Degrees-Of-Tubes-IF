@@ -128,4 +128,4 @@ class KMP
         }
         return results;
     }
-}
+};
