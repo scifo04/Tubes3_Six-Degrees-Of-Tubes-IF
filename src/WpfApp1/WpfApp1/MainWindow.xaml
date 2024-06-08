@@ -56,7 +56,7 @@
         
         <!-- Right Grid for Biodata List -->
         <Grid HorizontalAlignment="Right" Height="220" Margin="0,96,58,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="164">
-            <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black"/>
+            <Rectangle Fill="DimGray" RadiusX="20px" RadiusY="20px" Stroke="Black" MouseLeftButtonDown="GoToInfo"/>
             <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110">
                 Biodata
             </TextBlock>

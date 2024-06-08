@@ -90,3 +90,33 @@ D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\b
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x86\native\SQLite.Interop.dll
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Personal Doc\Projects\C#\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\BouncyCastle.Cryptography.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\EntityFramework.SqlServer.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\EntityFramework.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\Google.Protobuf.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\K4os.Compression.LZ4.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\K4os.Compression.LZ4.Streams.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\K4os.Hash.xxHash.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\MySql.Data.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\System.Data.SQLite.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\System.Data.SqlClient.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\System.Data.SQLite.EF6.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\System.IO.Pipelines.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\ZstdSharp.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\comerr64.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\gssapi64.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\k5sprt64.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\krb5_64.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\krbcc64.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-arm64\native\sni.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\sni.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x86\native\sni.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\linux-x64\native\SQLite.Interop.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\osx-x64\native\SQLite.Interop.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x64\native\SQLite.Interop.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win-x86\native\SQLite.Interop.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\bin\Debug\net8.0-windows7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\WpfApp1.csproj.Up2Date
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\InfoWindow.g.cs
+D:\Semester4\IF2211_Stima\Tubes3_Six-Degrees-Of-Tubes-IF\src\WpfApp1\WpfApp1\obj\Debug\net8.0-windows7.0\InfoWindow.baml

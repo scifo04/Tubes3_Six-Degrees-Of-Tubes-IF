@@ -1,0 +1,58 @@
+﻿<Window x:Class="WpfApp1.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="400" Width="500"
+        Background="Orange">
+    <Grid>
+        <Grid Margin="10,10,10,10">
+            <TextBlock Margin="0,0,99,194" FontFamily="Verdana" FontWeight="Bold">
+                <Run Text="NIK: "></Run>
+                <Run Name="NIKRes"></Run>
+            </TextBlock>
+            <TextBlock Margin="0,35,113,182" FontFamily="Verdana" FontWeight="Bold">
+                <Run Text="Nama: "></Run>
+                <Run Name="NamaRes"></Run>
+            </TextBlock>
+            <TextBlock Margin="0,70,99,152" FontFamily="Verdana" FontWeight="Bold">
+                <Run Text="Tempat Lahir: "/>
+                <Run x:Name="BornRes"/>
+            </TextBlock>
+            <TextBlock Margin="0,105,113,118" FontFamily="Verdana" FontWeight="Bold">
+                <Run Text="Jenis Kelamin: "/>
+                <Run x:Name="GenderRes"/>
+            </TextBlock>
+            <TextBlock Margin="0,140,90,67" FontFamily="Verdana" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+                <TextBlock.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.619"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-0.389"/>
+                    </TransformGroup>
+                </TextBlock.RenderTransform>
+                <Run Text="Golongan: "/>
+                <Run x:Name="BloodRes"/>
+            </TextBlock>
+            <TextBlock Margin="0,175,31,46" FontFamily="Verdana" FontWeight="Bold">
+                <Run Text="Alamat: "/>
+                <Run x:Name="AddressRes"/>
+            </TextBlock>
+            <TextBlock Margin="0,210,31,10" FontFamily="Verdana" FontWeight="Bold">
+                <Run Text="Status Perkawinan: "/>
+                <Run x:Name="StatusRes"/>
+            </TextBlock>
+            <TextBlock Margin="0,245,31,-10" FontFamily="Verdana" FontWeight="Bold">
+                <Run Text="Pekerjaan: "/>
+                <Run x:Name="JobRes"/>
+            </TextBlock>
+            <TextBlock Margin="0,280,10,-56" FontFamily="Verdana" FontWeight="Bold">
+                <Run Text="Kewarganegaraan: "/>
+                <Run x:Name="CitiRes"/>
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>

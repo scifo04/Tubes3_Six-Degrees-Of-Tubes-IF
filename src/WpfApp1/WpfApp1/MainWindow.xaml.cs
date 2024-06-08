@@ -10,18 +10,22 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using Org.BouncyCastle.Asn1.X509.Qualified;
+using System.Windows.Input;
 
 namespace WpfApp1
 {
     public partial class MainWindow : Window
     {
         private Backend backendState;
+        private Results res;
         private Dictionary<string, (int Position, int HammingDistance, double ClosenessPercentage)> bestMatchesDict = new Dictionary<string, (int, int, double)>();
         private AlaiRegex alaiRegex = new AlaiRegex(); // Added instance of AlaiRegex
+        private InfoWindow iW;
 
         public MainWindow()
         {
             backendState = new Backend();
+            res = new Results();
             InitializeComponent();
         }
 
@@ -80,7 +84,7 @@ namespace WpfApp1
 
                         // Fetch database data
                         List<(int Id, string TempBC, string AsciiRepresentation, string Nama)> databaseData = FetchDatabaseData();
-                        List<(string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> BiodataData = FetchBiodata();
+                        List<(string PK, string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> BiodataData = FetchBiodata();
 
                         // Perform search for the current ASCII representation
                         IStringSearchAlgorithm algorithm = GetSearchAlgorithm(backendState.getAlgo());
@@ -115,6 +119,17 @@ namespace WpfApp1
                                     if (alaiRegex.TestString2(bestMatch.Nama, item.Nama))
                                     { 
                                         matchedNames.Add(item.Nama);
+                                        res.setName(bestMatch.Nama);
+                                        res.setNik(item.PK);
+                                        res.setBirthLoc(item.TempatLahir);
+                                        res.setGender(item.JenisKelamin);
+                                        res.setBloodType(item.GolonganDarah);
+                                        res.setAddress(item.Alamat);
+                                        res.setMarriageStatus(item.StatusPerkawinan);
+                                        res.setJob(item.Pekerjaan);
+                                        res.setCitizenship(item.Kewarganegaraan);
+                                        res.setExecTime(stopwatch.ElapsedMilliseconds);
+                                        res.setMatchPercentage(bestMatch.ClosenessPercentage);
                                     }
                                 }                                
 
@@ -158,6 +173,8 @@ namespace WpfApp1
                                         matchedImg.UriSource = new Uri(combinedPath, UriKind.Absolute);
                                         matchedImg.EndInit();
                                         selectedImageGay.Source = matchedImg;
+                                        TimeRun.Text = res.getExecTime().ToString()+" ms";
+                                        Percentage.Text = res.getMatchPercentage().ToString()+ " %";
                                     }
                                     else
                                     {
@@ -238,9 +255,9 @@ namespace WpfApp1
         }
 
 
-        private List<(string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> FetchBiodata()
+        private List<(string PK, string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> FetchBiodata()
         {
-            List<(string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> data = new List<(string, string, string, string, string, string, string, string)>();
+            List<(string PK, string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> data = new List<(string, string, string, string, string, string, string, string, string)>();
             // string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.db");
             string connectionString = $"Data Source=example2.db;Version=3;";
             string query = "SELECT PK, nama, tempat_lahir, jenis_kelamin, golongan_darah, alamat, status_perkawinan, pekerjaan, kewarganegaraan FROM biodata";
@@ -266,7 +283,7 @@ namespace WpfApp1
                                 string pekerjaan = reader["pekerjaan"].ToString();
                                 string kewarganegaraan = reader["kewarganegaraan"].ToString();
 
-                                data.Add((nama, tempat_lahir, jenis_kelamin, golongan_darah, alamat, status_perkawinan, pekerjaan, kewarganegaraan));
+                                data.Add((PK, nama, tempat_lahir, jenis_kelamin, golongan_darah, alamat, status_perkawinan, pekerjaan, kewarganegaraan));
                             }
                         }
                     }
@@ -315,6 +332,16 @@ namespace WpfApp1
                 default:
                     throw new ArgumentException($"Unsupported algorithm: {algorithm}");
             }
+        }
+
+        private void GoToInfo(object sender, MouseButtonEventArgs e)
+        {
+            if (iW != null)
+            {
+                iW.Close();
+            }
+            iW = new InfoWindow(res);
+            iW.Show();
         }
     }
 }

@@ -64,6 +64,10 @@ namespace WpfApp1
         {
             return gender;
         }
+        public string getBloodType()
+        {
+            return bloodType;
+        }
         public string getAddress()
         {
             return address;
