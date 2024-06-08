@@ -36,15 +36,13 @@ namespace WpfApp1
             if (openFileDialog.ShowDialog() == true)
             {
                 backendState.setPic(openFileDialog.FileName);
-                // MessageBox.Show(backendState.getPic());
                 MessageBox.Show($"Selected file: {System.IO.Path.GetFileName(backendState.getPic())}");
-                // MessageBox.Show(backendState.getPic());
 
                 BitmapImage img = new BitmapImage();
                 img.BeginInit();
                 img.UriSource = new Uri(backendState.getPic(), UriKind.Absolute);
                 img.EndInit();
-                // MessageBox.Show(backendState.getPic());
+                MessageBox.Show(backendState.getPic());
                 selectedImage.Source = img;
 
             }
@@ -123,18 +121,6 @@ namespace WpfApp1
                                 // MessageBox.Show($"Final best match found at position {bestMatch.Position} with closeness {bestMatch.ClosenessPercentage}% at id {bestMatch.Id} with nama {bestMatch.Nama}", "Final Best Match Found");
                                 MessageBox.Show($"Final best match found at position {bestMatch.Position} with closeness {bestMatch.ClosenessPercentage}% at id {bestMatch.Id} with nama {bestMatch.Nama} and Image {bestMatch.TempBC}", "Final Best Match Found");
 
-                                string imageFilePath = Path.Combine("../../../test/", bestMatch.TempBC);
-                                // backendState.setPic2(imageFilePath);
-
-                                // MessageBox.Show($"Result file: {System.IO.Path.GetFileName(backendState.getPic2())}");
-                                // MessageBox.Show(backendState.getPic());
-                                BitmapImage img = new BitmapImage();
-                                img.BeginInit();
-                                MessageBox.Show(imageFilePath);
-                                img.UriSource = new Uri(imageFilePath, UriKind.Absolute);
-                                img.EndInit();
-                                selectedImageGay.Source = img;
-
                                 if (matchedNames.Count > 0)
                                 {
                                     MessageBox.Show($"First matched name: {matchedNames[0]}", "Matched Name", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -143,6 +129,46 @@ namespace WpfApp1
                                 {
                                     MessageBox.Show("No matches found in biodata.", "No Match", MessageBoxButton.OK, MessageBoxImage.Information);
                                 }
+
+                                // Assuming bestMatch.TempBC contains the name of the image file
+                                string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+                                // Find the last occurrence of "src" in the base directory path
+                                int srcIndex = baseDirectory.LastIndexOf("src");
+
+                                if (srcIndex != -1)
+                                {
+                                    // Cut the path before the last "src" occurrence
+                                    string rootPath = baseDirectory.Substring(0, srcIndex);
+
+                                    // Concatenate with "test" and the filename
+                                    string relativePath = Path.Combine(rootPath, "test", bestMatch.TempBC);
+
+                                    // Get the absolute path
+                                    string combinedPath = Path.GetFullPath(relativePath);
+
+                                    // Ensure that the combined path is pointing correctly to the intended directory
+                                    MessageBox.Show(bestMatch.TempBC);
+                                    MessageBox.Show(combinedPath);
+
+                                    if (File.Exists(combinedPath))
+                                    {
+                                        BitmapImage matchedImg = new BitmapImage();
+                                        matchedImg.BeginInit();
+                                        matchedImg.UriSource = new Uri(combinedPath, UriKind.Absolute);
+                                        matchedImg.EndInit();
+                                        selectedImageGay.Source = matchedImg;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Matched image file not found.", "File Not Found", MessageBoxButton.OK, MessageBoxImage.Warning);
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("The path does not contain 'src'.", "Path Error", MessageBoxButton.OK, MessageBoxImage.Error);
+    }
+
 
                                 MessageBox.Show($"Time taken: {stopwatch.ElapsedMilliseconds} milliseconds");
                             }
