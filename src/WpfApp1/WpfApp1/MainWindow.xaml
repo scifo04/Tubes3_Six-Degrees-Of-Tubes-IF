@@ -46,11 +46,11 @@
             <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,86,0,110"><Run Text="Biodata"/></TextBlock>
             <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" Foreground="White" FontSize="20px" FontFamily="Arial" Margin="0,110,0,88"><Run Text="List"/></TextBlock>
         </Grid>
-        <TextBlock Margin="550,242,106,62" Grid.Row="1">
+        <TextBlock Margin="550,228,106,76" Grid.Row="1">
             <Run Text="Execution Time: "/>
             <Run Name="TimeRun" Text=""/>
         </TextBlock>
-        <TextBlock Margin="550,263,106,41" Grid.Row="1">
+        <TextBlock Margin="550,247,106,58" Grid.Row="1">
             <Run Text="Match Percentage: "/>
             <Run Name="Percentage" Text=""/>
         </TextBlock>
