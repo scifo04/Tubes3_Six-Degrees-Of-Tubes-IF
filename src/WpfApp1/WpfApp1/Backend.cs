@@ -1,42 +1,87 @@
 using System;
-using System.Windows;
-using System.IO;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace WpfApp1
 {
-    public class Backend
+    public class Backend : INotifyPropertyChanged
     {
         private string chosenPic;
+        private string chosenPic2;
         private string chosenAlgo;
-        private Results gottenResults;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public Backend()
         {
             chosenPic = "";
+            chosenPic2 = "";
             chosenAlgo = "";
         }
-        public void run()
+
+        public string ChosenPic
         {
-            MessageBox.Show($"Searching matches for {Path.GetFileName(getPic())} with {getAlgo()} algorithm");
+            get { return chosenPic; }
+            set
+            {
+                chosenPic = value;
+                OnPropertyChanged();
+            }
         }
 
-        public string getPic()
+        public string ChosenPic2
         {
-            return chosenPic;
+            get { return chosenPic2; }
+            set
+            {
+                chosenPic2 = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string ChosenAlgo
+        {
+            get { return chosenAlgo; }
+            set
+            {
+                chosenAlgo = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public void setPic(string pic)
         {
-            chosenPic = pic;
+            ChosenPic = pic;
+        }
+
+        public void setPic2(string pic)
+        {
+            ChosenPic2 = pic;
+        }
+
+        public string getPic()
+        {
+            return ChosenPic;
+        }
+
+        public string getPic2()
+        {
+            return ChosenPic2;
         }
 
         public string getAlgo()
         {
-            return chosenAlgo;
+            return ChosenAlgo;
         }
 
-        public void setAlgo(string algo) { 
-            chosenAlgo = algo;
+        public void setAlgo(string algo)
+        {
+            ChosenAlgo = algo;
         }
     }
 }
