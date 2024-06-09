@@ -27,6 +27,11 @@ namespace WpfApp1
             backendState = new Backend();
             res = new Results();
             InitializeComponent();
+
+            string relativeSqlPath = "./sql/tubes3_stima24.sql";
+            string relativeDbPath = "./demo/tubes3_stima24.db";
+
+            ConvertSqlToDb(relativeSqlPath, relativeDbPath);
         }
 
         private void searchClick(object sender, RoutedEventArgs e)
@@ -216,7 +221,7 @@ namespace WpfApp1
         private List<(string TempBC, string AsciiRepresentation, string Nama)> FetchDatabaseData()
         {
             List<(string TempBC, string AsciiRepresentation, string Nama)> data = new List<(string TempBC, string AsciiRepresentation, string Nama)>();
-            string connectionString = $"Data Source=example2.db;Version=3;";
+            string connectionString = $"Data Source=./demo/example2.db;Version=3;";
             string query = "SELECT berkas_citra, nama FROM sidik_jari";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
@@ -255,7 +260,7 @@ namespace WpfApp1
         {
             List<(string PK, string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> data = new List<(string, string, string, string, string, string, string, string, string)>();
             // string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.db");
-            string connectionString = $"Data Source=example2.db;Version=3;";
+            string connectionString = $"Data Source=./demo/example2.db;Version=3;";
             string query = "SELECT PK, nama, tempat_lahir, jenis_kelamin, golongan_darah, alamat, status_perkawinan, pekerjaan, kewarganegaraan FROM biodata";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
@@ -338,6 +343,51 @@ namespace WpfApp1
             }
             iW = new InfoWindow(res);
             iW.Show();
+        }
+
+        public static void ConvertSqlToDb(string relativeSqlPath, string relativeDbPath)
+        {
+            string sqlFilePath = Path.GetFullPath(relativeSqlPath);
+            string dbFilePath = Path.GetFullPath(relativeDbPath);
+
+            if (!File.Exists(sqlFilePath))
+            {
+                Console.WriteLine("SQL file not found.");
+                return;
+            }
+
+            if (File.Exists(dbFilePath))
+            {
+                Console.WriteLine($"Database already exists at {dbFilePath}. Skipping creation.");
+                return;
+            }
+
+            // Create the SQLite connection string
+            string connectionString = $"Data Source={dbFilePath};Version=3;";
+
+            try
+            {
+                // Create and open a connection to the new .db file
+                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Read the SQL commands from the .sql file
+                    string sqlCommands = File.ReadAllText(sqlFilePath);
+
+                    // Execute the SQL commands
+                    using (SQLiteCommand command = new SQLiteCommand(sqlCommands, connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                }
+
+                Console.WriteLine($"Database created successfully at {dbFilePath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
     }
 }
