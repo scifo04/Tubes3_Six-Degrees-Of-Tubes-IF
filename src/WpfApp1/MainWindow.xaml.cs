@@ -28,10 +28,70 @@ namespace WpfApp1
             res = new Results();
             InitializeComponent();
 
-            string relativeSqlPath = "./sql/tubes3_stima24.sql";
-            string relativeDbPath = "./demo/tubes3_stima24.db";
+            string sqlFilePath = "./sql/try1.sql";
+            string dbFilePath = "./demo/try1.db";
 
-            ConvertSqlToDb(relativeSqlPath, relativeDbPath);
+            bool success = CreateDatabaseFromSqlFile(sqlFilePath, dbFilePath);
+
+            if (success)
+            {
+                MessageBox.Show("Database created successfully.");
+            }
+            else
+            {
+                MessageBox.Show("Failed to create database.");
+            }
+        }
+
+        static bool CreateDatabaseFromSqlFile(string sqlFilePath, string dbFilePath)
+        {
+            try
+            {
+                // Ensure the SQL file exists
+                if (!File.Exists(sqlFilePath))
+                {
+                    MessageBox.Show("SQL file does not exist.");
+                    return false;
+                }
+
+                // Read the SQL file
+                string sqlCommands = File.ReadAllText(sqlFilePath);
+
+                // Create a new SQLite database file
+                SQLiteConnection.CreateFile(dbFilePath);
+
+                // Open a connection to the new database
+                using (var connection = new SQLiteConnection($"Data Source={dbFilePath};Version=3;"))
+                {
+                    connection.Open();
+
+                    // Execute the SQL commands
+                    using (var command = new SQLiteCommand(connection))
+                    {
+                        command.CommandText = sqlCommands;
+                        command.ExecuteNonQuery();
+                    }
+
+                    connection.Close();
+                }
+
+                return true; // Indicate success
+            }
+            catch (SQLiteException sqlex)
+            {
+                MessageBox.Show($"SQLite error: {sqlex.Message}");
+                return false; // Indicate failure
+            }
+            catch (FileNotFoundException fnfex)
+            {
+                MessageBox.Show($"File not found: {fnfex.Message}");
+                return false; // Indicate failure
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}");
+                return false; // Indicate failure
+            }
         }
 
         private void searchClick(object sender, RoutedEventArgs e)
@@ -221,7 +281,7 @@ namespace WpfApp1
         private List<(string TempBC, string AsciiRepresentation, string Nama)> FetchDatabaseData()
         {
             List<(string TempBC, string AsciiRepresentation, string Nama)> data = new List<(string TempBC, string AsciiRepresentation, string Nama)>();
-            string connectionString = $"Data Source=./demo/example2.db;Version=3;";
+            string connectionString = $"Data Source=./demo/try1.db;Version=3;";
             string query = "SELECT berkas_citra, nama FROM sidik_jari";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
@@ -260,8 +320,8 @@ namespace WpfApp1
         {
             List<(string PK, string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> data = new List<(string, string, string, string, string, string, string, string, string)>();
             // string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.db");
-            string connectionString = $"Data Source=./demo/example2.db;Version=3;";
-            string query = "SELECT PK, nama, tempat_lahir, jenis_kelamin, golongan_darah, alamat, status_perkawinan, pekerjaan, kewarganegaraan FROM biodata";
+            string connectionString = $"Data Source=./demo/try1.db;Version=3;";
+            string query = "SELECT NIK, nama, tempat_lahir, jenis_kelamin, golongan_darah, alamat, status_perkawinan, pekerjaan, kewarganegaraan FROM biodata";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -343,51 +403,6 @@ namespace WpfApp1
             }
             iW = new InfoWindow(res);
             iW.Show();
-        }
-
-        public static void ConvertSqlToDb(string relativeSqlPath, string relativeDbPath)
-        {
-            string sqlFilePath = Path.GetFullPath(relativeSqlPath);
-            string dbFilePath = Path.GetFullPath(relativeDbPath);
-
-            if (!File.Exists(sqlFilePath))
-            {
-                Console.WriteLine("SQL file not found.");
-                return;
-            }
-
-            if (File.Exists(dbFilePath))
-            {
-                Console.WriteLine($"Database already exists at {dbFilePath}. Skipping creation.");
-                return;
-            }
-
-            // Create the SQLite connection string
-            string connectionString = $"Data Source={dbFilePath};Version=3;";
-
-            try
-            {
-                // Create and open a connection to the new .db file
-                using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-                {
-                    connection.Open();
-
-                    // Read the SQL commands from the .sql file
-                    string sqlCommands = File.ReadAllText(sqlFilePath);
-
-                    // Execute the SQL commands
-                    using (SQLiteCommand command = new SQLiteCommand(sqlCommands, connection))
-                    {
-                        command.ExecuteNonQuery();
-                    }
-                }
-
-                Console.WriteLine($"Database created successfully at {dbFilePath}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"An error occurred: {ex.Message}");
-            }
         }
     }
 }

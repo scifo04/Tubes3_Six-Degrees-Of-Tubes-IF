@@ -27,11 +27,11 @@ CREATE TABLE `biodata` (
   `nama` varchar(100) DEFAULT NULL,
   `tempat_lahir` varchar(50) DEFAULT NULL,
   `tanggal_lahir` date DEFAULT NULL,
-  `jenis_kelamin` enum('Laki-Laki','Perempuan') DEFAULT NULL,
+  `jenis_kelamin` TEXT DEFAULT NULL,
   `golongan_darah` varchar(5) DEFAULT NULL,
   `alamat` varchar(255) DEFAULT NULL,
   `agama` varchar(50) DEFAULT NULL,
-  `status_perkawinan` enum('Belum Menikah','Menikah','Cerai') DEFAULT NULL,
+  `status_perkawinan` TEXT DEFAULT NULL,
   `pekerjaan` varchar(100) DEFAULT NULL,
   `kewarganegaraan` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`NIK`)
