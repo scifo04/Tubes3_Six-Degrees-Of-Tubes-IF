@@ -51,6 +51,10 @@ Usai melakukan string matching maka akan mendapatkan nama pemilik sidik jari, ya
 8. Tunggu unutk mendapatkan hasil
 9. Hasil akan muncul ketika box biodata ditekan
 
+## Side Note
+
+Untuk dapat melakukan input data, diperlukan sebuah file sql yang suitable dengan SQLite.
+
 # Author
 
 Group name: Six Degrees of Tubes IF
