@@ -281,7 +281,7 @@ namespace WpfApp1
         private List<(string TempBC, string AsciiRepresentation, string Nama)> FetchDatabaseData()
         {
             List<(string TempBC, string AsciiRepresentation, string Nama)> data = new List<(string TempBC, string AsciiRepresentation, string Nama)>();
-            string connectionString = $"Data Source=./demo/try1.db;Version=3;";
+            string connectionString = $"Data Source=./demo/example2.db;Version=3;";
             string query = "SELECT berkas_citra, nama FROM sidik_jari";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
@@ -320,7 +320,7 @@ namespace WpfApp1
         {
             List<(string PK, string Nama, string TempatLahir, string JenisKelamin, string GolonganDarah, string Alamat, string StatusPerkawinan, string Pekerjaan, string Kewarganegaraan)> data = new List<(string, string, string, string, string, string, string, string, string)>();
             // string dbFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.db");
-            string connectionString = $"Data Source=./demo/try1.db;Version=3;";
+            string connectionString = $"Data Source=./demo/example2.db;Version=3;";
             string query = "SELECT NIK, nama, tempat_lahir, jenis_kelamin, golongan_darah, alamat, status_perkawinan, pekerjaan, kewarganegaraan FROM biodata";
 
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
