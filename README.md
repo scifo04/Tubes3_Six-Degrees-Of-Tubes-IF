@@ -10,6 +10,8 @@ Algoritma yang merupakan pengembangan dari brute force, algoritma ini menggunaka
 2. Boyer Moore (BM)
 BM adalah algoritma pencocokan pola yang berdasarkan dua teknik yaitu looking-glass technique dan character-jump technique. Pada looking-glass, hal ini melibatkan pencarian P di T secara mundur melalui P dan mulai dari karakter yang paling terakhir. Pada character-jump, hal ini dilibatkan ketika terjadi ketidakcocokan dalam salah satu huruf di kata yang ingin diproses dengan kata yang akan dicari kesamaannya akan kata yang ingin di proses.
 
+Usai melakukan string matching maka akan mendapatkan nama pemilik sidik jari, yang selanjutnya akan dicocokkan dengan databse nama alay menggunakan regex
+
 # Requirements
 - [.NET](https://dotnet.microsoft.com/id-id/download/dotnet-framework)
 
